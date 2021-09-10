@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 import { AnalyticsService } from './@core/utils/analytics.service';
 import { SeoService } from './@core/utils/seo.service';
 
-export const idUserLogged = '603291a3fca9f4024afd10e3';
+export const idUserLogged = '612c4745d272afc6fe5c0296';
 
 @Component({
   selector: 'ngx-app',
