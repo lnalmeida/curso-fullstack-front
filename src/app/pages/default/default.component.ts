@@ -15,8 +15,13 @@ export class DefaultComponent {
     private taskService: TaskService,
     private dashService: DashService,
   ) {
-    this.userService.list().subscribe((users) => console.log('Users: ', users));
-    this.taskService.list(TaskFilterEnum.ALL).subscribe((tasks) => console.log('Tasks: ', tasks));
-    this.dashService.list().subscribe((dash) => console.log('Dash: ', dash));
+    this.userService.list()
+      .subscribe((users) => console.log('Users: ', users));
+
+    this.taskService.list(TaskFilterEnum.ALL)
+      .subscribe((tasks) => console.log('Tasks: ', tasks));
+
+    this.dashService.list()
+      .subscribe((dash) => console.log('Dash: ', dash));
   }
 }

@@ -15,7 +15,7 @@ export class TaskService extends DefaultService {
   }
 
   list(taskFilterEnum: TaskFilterEnum): Observable<ResponseApp<Task[]>> {
-    return this.http.get<ResponseApp<Task[]>>(`${this.url}/${taskFilterEnum}$/{idUserLogged}`);
+    return this.http.get<ResponseApp<Task[]>>(`${this.url}/${taskFilterEnum}/${idUserLogged}`);
   }
 
   show(id: string): Observable<ResponseApp<Task>> {
