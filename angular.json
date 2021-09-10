@@ -10,9 +10,9 @@
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
-          "options": {            
+          "options": {
             "aot": true,
-            "preserveSymlinks": true,            
+            "preserveSymlinks": true,
             "outputPath": "dist",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -36,7 +36,9 @@
             "scripts": [
               "node_modules/pace-js/pace.min.js"
             ],
-            "allowedCommonJsDependencies": ["lodash"]          
+            "allowedCommonJsDependencies": [
+              "lodash"
+            ]
           },
           "configurations": {
             "production": {
@@ -107,7 +109,7 @@
               "src/favicon.png"
             ]
           }
-        }   
+        }
       }
     },
     "curso-fullstack-front-e2e": {
@@ -131,5 +133,8 @@
       "style": "scss"
     },
     "@schematics/angular:directive": {}
+  },
+  "cli": {
+    "analytics": false
   }
 }
