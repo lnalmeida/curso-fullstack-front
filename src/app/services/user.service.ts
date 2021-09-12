@@ -29,7 +29,7 @@ export class UserService extends DefaultService {
     return this.http.put<ResponseApp<User>>(`${this.url}/${user._id}`, user);
   }
 
-  delete(id: string): Observable<ResponseApp<User>> {
+  delete(id: String): Observable<ResponseApp<User>> {
     return this.http.delete<ResponseApp<User>>(`${this.url}/${id}`);
   }
 }

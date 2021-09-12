@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { PagesComponent } from './pages.component';
 
 import { DefaultComponent } from './default/default.component';
+import { UserComponent } from './user/user.component';
 
 const routes: Routes = [{
   path: '',
@@ -16,6 +17,10 @@ const routes: Routes = [{
     {
       path: 'default',
       component: DefaultComponent,
+    },
+    {
+      path: 'users',
+      component: UserComponent,
     },
   ],
 }];
