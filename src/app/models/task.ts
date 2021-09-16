@@ -20,9 +20,11 @@ export class Task {
     this._id = task._id;
     this.description = task.description;
     this.responsibleName = task.responsible.name;
+    this.status = task.status;
 
     if (StatusEnum.OPEN === this.status) this.statusTranslate = 'Em aberto';
-    else this.statusTranslate = 'Finalizado';
+    else this.statusTranslate = 'Concluído';
+    console.log(this.status);
   }
 }
 
@@ -35,7 +37,7 @@ export enum TaskFilterEnum {
 
 export class TaskFilter {
   title: string;
-  link: '/pages/task';
+  link = '/pages/tasks/';
   queryParams: Params;
 
   constructor(title:string, filter: TaskFilterEnum) {

@@ -121,10 +121,10 @@ export class UserComponent implements OnInit {
   }
 
   private findFormAdd() {
-    const usuario = this.formUser.value;
-    delete usuario._id;
+    const user = this.formUser.value;
+    delete user._id;
 
-    return usuario;
+    return user;
   }
 
   private setFormInvalid() {
@@ -147,7 +147,6 @@ export class UserComponent implements OnInit {
       this.tbUserData = this.tbUserData.filter(((user: User) => user._id !== this.userSelected._id));
       this.toastService.success('Usuário excluído com sucesso.', 'Sucesso');
       this.dialogRef.close();
-      console.log(this.userSelected);
     });
   }
 }

@@ -5,7 +5,8 @@ import { ThemeModule } from '../@theme/theme.module';
 import { PagesComponent } from './pages.component';
 import { PagesRoutingModule } from './pages-routing.module';
 import { DefaultdModule } from './default/default.module';
-import { UserdModule } from './user/user.module';
+import { UserModule } from './user/user.module';
+import { TaskModule } from './task/task.module';
 
 @NgModule({
   imports: [
@@ -13,7 +14,8 @@ import { UserdModule } from './user/user.module';
     ThemeModule,
     NbMenuModule,
     DefaultdModule,
-    UserdModule,
+    UserModule,
+    TaskModule,
 
   ],
   declarations: [

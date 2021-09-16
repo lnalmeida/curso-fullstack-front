@@ -5,6 +5,7 @@ import { PagesComponent } from './pages.component';
 
 import { DefaultComponent } from './default/default.component';
 import { UserComponent } from './user/user.component';
+import { TaskComponent } from './task/task.component';
 
 const routes: Routes = [{
   path: '',
@@ -21,6 +22,10 @@ const routes: Routes = [{
     {
       path: 'users',
       component: UserComponent,
+    },
+    {
+      path: 'tasks',
+      component: TaskComponent,
     },
   ],
 }];

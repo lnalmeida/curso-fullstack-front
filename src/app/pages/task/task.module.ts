@@ -3,10 +3,11 @@ import { NbCardModule } from '@nebular/theme';
 
 import { Ng2SmartTableModule } from 'ng2-smart-table';
 import { ReactiveFormsModule } from '@angular/forms';
+import { TaskService } from 'app/services/task.service';
 import { UserService } from 'app/services/user.service';
 import { ThemeModule } from '../../@theme/theme.module';
 
-import { UserComponent } from './user.component';
+import { TaskComponent } from './task.component';
 
 @NgModule({
   imports: [
@@ -16,9 +17,9 @@ import { UserComponent } from './user.component';
     Ng2SmartTableModule,
   ],
   declarations: [
-    UserComponent,
+    TaskComponent,
   ],
-  providers: [UserService],
+  providers: [TaskService, UserService],
 
 })
-export class UserModule { }
+export class TaskModule { }
