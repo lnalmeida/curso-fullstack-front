@@ -149,8 +149,8 @@ export class TaskComponent implements OnInit {
 
   private addTask() {
     this.taskService.create(this.findFormAdd()).subscribe((res) => {
+      this.tbTaskData.push(new Task(res.body));
       this.ng2TbTask.source.refresh();
-      this.tbTaskData.push(res.body);
       this.toastService.success('Tarefa cadastrada com sucesso', 'Sucesso!!!');
       this.dialogRef.close();
     });
@@ -159,7 +159,7 @@ export class TaskComponent implements OnInit {
   private editTask() {
     this.taskService.update(this.formTask.value).subscribe((res) => {
       this.tbTaskData = this.tbTaskData.map((task: Task) => {
-        if (task._id === this.formTask.value._id) return this.formTask.value;
+        if (task._id === this.formTask.value._id) return new Task(res.body);
         return task;
       });
       this.toastService.success('Tarefa editada com sucesso.', 'Sucesso!!!');
