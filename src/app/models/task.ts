@@ -24,7 +24,6 @@ export class Task {
 
     if (StatusEnum.OPEN === this.status) this.statusTranslate = 'Em aberto';
     else this.statusTranslate = 'Concluído';
-    console.log(this.status);
   }
 }
 

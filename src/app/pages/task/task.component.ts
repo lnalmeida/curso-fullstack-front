@@ -75,7 +75,6 @@ export class TaskComponent implements OnInit {
   private setDataTbTask() {
     this.taskService.list(this.taskFilter).pipe(this.formatTaskResponse()).subscribe((res) => {
       this.tbTaskData = res;
-      console.log(res);
     });
   }
 
