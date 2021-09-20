@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { PagesComponent } from './pages.component';
 
-import { DefaultComponent } from './default/default.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 import { UserComponent } from './user/user.component';
 import { TaskComponent } from './task/task.component';
 
@@ -13,11 +13,11 @@ const routes: Routes = [{
   children: [
     {
       path: '',
-      component: DefaultComponent,
+      component: DashboardComponent,
     },
     {
-      path: 'default',
-      component: DefaultComponent,
+      path: 'dashboard',
+      component: DashboardComponent,
     },
     {
       path: 'users',

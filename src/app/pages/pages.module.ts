@@ -4,7 +4,7 @@ import { NbMenuModule } from '@nebular/theme';
 import { ThemeModule } from '../@theme/theme.module';
 import { PagesComponent } from './pages.component';
 import { PagesRoutingModule } from './pages-routing.module';
-import { DefaultdModule } from './default/default.module';
+import { DashboardModule } from './dashboard/dashboard.module';
 import { UserModule } from './user/user.module';
 import { TaskModule } from './task/task.module';
 
@@ -13,7 +13,7 @@ import { TaskModule } from './task/task.module';
     PagesRoutingModule,
     ThemeModule,
     NbMenuModule,
-    DefaultdModule,
+    DashboardModule,
     UserModule,
     TaskModule,
 

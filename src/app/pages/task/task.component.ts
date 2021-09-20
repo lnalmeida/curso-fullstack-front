@@ -190,9 +190,13 @@ export class TaskComponent implements OnInit {
 
   public btnDelete() {
     this.taskService.delete(this.taskSelected._id).subscribe((res) => {
-      this.tbTaskData = this.tbTaskData.filter(((task: Task) => task._id !== this.taskSelected._id));
-      this.toastService.success('Tarefa excluída com sucesso.', 'Sucesso');
-      this.dialogRef.close();
+      try {
+        this.tbTaskData = this.tbTaskData.filter(((task: Task) => task._id !== this.taskSelected._id));
+        this.toastService.success('Tarefa excluída com sucesso.', 'Sucesso');
+        this.dialogRef.close();
+      } catch (error) {
+        this.dialogRef.close();
+      }
     });
   }
 

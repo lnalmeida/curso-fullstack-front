@@ -1,0 +1,60 @@
+<!--Card My Tasks -->
+<div class="row">
+    <div class="col-lg-3 col-md-12 card-dash">
+      <nb-card class="off" (click)="btnGoToMy()">
+        <div class="icon-container">
+          <div class="icon blue nb-lightbulb"></div>
+        </div>
+        <div>
+          <div class="title">Minhas</div>
+          <div class="total">{{ totalMyTasks }}</div>
+        </div>
+      </nb-card>
+    </div>
+<!--Card Opened Tasks -->
+    <div class="col-lg-3 col-md-12 card-dash">
+      <nb-card class="off" (click)="btnGoToOpened()">
+        <div class="icon-container">
+          <div class="icon yellow nb-alert"></div>
+        </div>
+        <div>
+          <div class="title">Em Aberto</div>
+          <div class="total">{{ totalOpeneds }}</div>
+        </div>
+      </nb-card>
+    </div>
+<!--Card Finished Tasks -->
+    <div class="col-lg-3 col-md-12 card-dash">
+      <nb-card class="off" (click)="btnGoToFinished()">
+        <div class="icon-container">
+          <div class="icon green nb-lightbulb"></div>
+        </div>
+        <div>
+          <div class="title">Concluídas</div>
+          <div class="total">{{ totalFinisheds }}</div>
+        </div>
+      </nb-card>
+    </div>
+  <!--Card All Tasks -->
+    <div class="col-lg-3 col-md-12 card-dash">
+      <nb-card class="off" (click)="btnGoToAll()">
+        <div class="icon-container">
+          <div class="icon gray nb-grid-a-outline"></div>
+        </div>
+        <div>
+          <div class="title">Todas</div>
+          <div class="total">{{ totalAll }}</div>
+        </div>
+      </nb-card>
+    </div>
+    
+    <div class="col-lg-4 col-md-12 card-dash">
+      <div echarts [options]="optionMyTasks"></div>
+    </div>
+
+    <div class="col-lg-4 col-md-12 card-dash">
+      <div echarts [options]="optionTaskResponsible"></div>
+    </div>
+
+</div>
+  <!-- /row-->
