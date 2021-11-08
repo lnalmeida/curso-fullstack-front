@@ -10,5 +10,5 @@
 
 export const environment = {
   production: false,
-  url: 'http://localhost:3333/',
+  url: 'https://api-todo-angular.herokuapp.com/',
 };
